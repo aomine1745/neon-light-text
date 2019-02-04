@@ -1,0 +1,45 @@
+@font-face{
+	font-family: "Quicksand";
+	src:url("../font/Quicksand.ttf") format("truetype");
+}
+body{
+	margin: 0;
+	padding: 0;
+	background-image: url(../img/bg.jpg);
+	background-size: cover;
+
+}
+.neon{
+	position: absolute;
+	top: 50%;
+	left: 50%;
+	transform: translate(-50%, -50%);
+	margin: 0;
+	padding: 0 20px;
+	font-size: 6em;
+	font-family: 'Quicksand', sans-serif;
+	color: #fff;
+	text-shadow: 0 0 20px #2900ff;
+}
+.neon:after{
+	content: attr(data-text);
+	position: absolute;
+	top: 0;
+	left: 0;
+	padding: 0 20px;
+	z-index: -1;
+	color: #2900ff;
+	filter: blur(15px);
+}
+.neon:before{
+	content: '';
+	position: absolute;
+	top: 0;
+	left: 0;
+	width: 100%;
+	height: 100%;
+	background-color: #4d3afe;
+	z-index: -2;
+	opacity: 0.5;
+	filter: blur(70px);
+}
